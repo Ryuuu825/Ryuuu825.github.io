@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custome class */
+@layer utilities {
+  .active-link {
+    scale: 1.05;
+    color: #fff;
+    text-underline-offset: 0.7rem;
+    text-decoration: underline;
+  }
+
+  .active-link-1 {
+    scale: 1.05;
+    text-underline-offset: 0.7rem;
+    text-decoration: underline;
+  }
+}

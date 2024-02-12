@@ -1,0 +1,1 @@
+<h1 class="w-full mx-auto text-2xl flex justify-center align-middle items-center h-[20rem] animate-fade-in">Comming Soon...</h1>
