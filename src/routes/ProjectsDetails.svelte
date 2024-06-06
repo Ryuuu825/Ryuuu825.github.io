@@ -4,8 +4,7 @@
     import SvelteMarkdown from 'svelte-markdown'
     import { toast } from "@zerodevx/svelte-toast";
 
-    // http://localhost:5173/#/projects/ios-app-clone?readme=https://raw.githubusercontent.com/Ryuuu825/ios-app-clone/main/readme.md
-    let projectName = window.location.hash.slice(1).split("=")[0].split("/")[2];
+    let projectName = window.location.hash.slice(1).split("?")[1].split("=")[1].split("/")[4];
     let readmePath = window.location.hash.slice(1).split("=")[1];
 
     const fetchContent = async () => {
@@ -13,7 +12,31 @@
             const response = await fetch(readmePath);
             if (response.ok) {
                 let content = await response.text();
-                // turn all the relative path to absolute path : https://github.com/Ryuuu825/ios-app-clone/blob/main
+                // https://github.com/Ryuuu825/ios-app-clone/raw/main/assets/mcl-cinemas/mcl-cinemas.gif
+                content = content.replaceAll(`./`, `https://github.com/Ryuuu825/${projectName}/raw/master/`);
+
+                // remove all <object> tag
+                content = content.replaceAll(`<object`, `<objec`);
+                content = content.replaceAll(`<embed`, `<embe`);
+                
+                // change all pdf links to github blob links
+                const pdfLinks = content.match(/https:\/\/github.com\/Ryuuu825\/[a-zA-Z0-9-]+\/([a-zA-Z0-9-]+\/)+[a-zA-Z0-9-]+.pdf/g);
+                if (pdfLinks != null) {
+                    pdfLinks.forEach((pdfLink) => {
+                        const pdfLinkRaw = pdfLink.replace("raw", "blob");
+                        content = content.replaceAll(pdfLink, pdfLinkRaw);
+                    });
+                }
+
+                // change all a tags to blob links
+                const imgLinks = content.match(/\[[a-zA-Z0-9]+\]\(https:\/\/github.com\/Ryuuu825\/[a-zA-Z-]+\/raw\/master(\/[a-zA-Z0-9.]+)+\)/g);
+                if (imgLinks != null) {
+                    imgLinks.forEach((imgLink) => {
+                        const imgLinkRaw = imgLink.replace("raw", "blob");
+                        content = content.replaceAll(imgLink, imgLinkRaw);
+                    });
+                }
+
                 return content;
             }
         } catch (error) {
@@ -23,6 +46,12 @@
     };
 
     const get = () => {
+        // change all a tags to open in new tab
+        document.querySelectorAll("a").forEach((a) => {
+            a.setAttribute("target", "_blank");
+            a.setAttribute("rel", "noopener noreferrer");
+        });
+
         document.querySelectorAll("pre > code").forEach((pre) => {
             pre.addEventListener("click", (e) => {
                 // get the text content of the <pre>
@@ -31,15 +60,13 @@
                 toast.push("Copied to clipboard!");
                 
             });
-            // check the length of the text content, if the code just 5 words, dont margin-x too much
-    });
+        });
     }
 
     
 </script>
 
 <div id="detail-container" class="xl:px-32 lg:px-2 sm:px-0 ">
-    <div class="mt-12"></div>
     {#await fetchContent()}
         <div class="flex justify-center">
             <div
@@ -62,7 +89,6 @@
         margin-bottom: 1rem;
         margin-top: 1rem;
         padding-top: 1rem;
-        border-top: 1px solid rgb(69, 75, 78);
     }
 
     :global(#detail-container  h2 ) {
@@ -100,9 +126,8 @@
         margin: 0.25rem 0.15rem;
         border-radius: 0.25rem;
         display: inline-block;
+        user-select: text;
     }
-
-    
 
     :global(#detail-container p::first-letter ) {
         padding-left: 1rem /* 48px */;
@@ -160,6 +185,13 @@
     :global(#detail-container a ) {
         color: rgb(255, 255, 255);
         text-decoration: underline;
+    }
+
+    :global(img) {
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
 

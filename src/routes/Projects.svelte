@@ -9,23 +9,35 @@
     }
 
     const resolveProjectMetaFilePath = (isPrivate, projectName) => {
-        `https://raw.githubusercontent.com/Ryuuu825/${projectName}/main/readme.md`;
+        return `https://raw.githubusercontent.com/Ryuuu825/${projectName}/main/readme.md`;
     }
 
 
-
     let projects = [];
-    projects.push({
-        component: ProjectsEntry,
-        props: {
-            id: 1,
-            projectName: "ios-app-clone",
-            isPrivateRepo: false,
-            projectIconImagePath : resolveProjectIconImagePath("ios-app-clone"),
-            projectMetaFilePath : resolveProjectMetaFilePath(false, "ios-app-clone"),
-            projectDescription : "Clone of iOS app using SwiftUI",
-        }
-    })
+    projects.push(
+        {
+            component: ProjectsEntry,
+            props: {
+                id: 1,
+                projectName: "ios-app-clone",
+                isPrivateRepo: false,
+                projectIconImagePath : "",
+                projectMetaFilePath : resolveProjectMetaFilePath(false, "ios-app-clone"),
+                projectDescription : "Clone of iOS app using SwiftUI",
+            }
+        },
+        {   
+            component: ProjectsEntry,
+            props: {
+                id: 2,
+                projectName: "The Better Limited ERP System",
+                isPrivateRepo: false,
+                projectIconImagePath : "https://github.com/Ryuuu825/ITP4915M-2022/blob/master/docs/cover.png?raw=true",
+                projectMetaFilePath : "https://raw.githubusercontent.com/Ryuuu825/ITP4915M-2022/Ryuuu825-patch-1/README.md",
+                projectDescription : "Clone of iOS app using SwiftUI",
+            }
+        },
+    )
 
     let pinnedProjects = [
         {

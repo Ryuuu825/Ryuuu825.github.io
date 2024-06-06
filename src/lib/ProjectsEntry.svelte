@@ -6,6 +6,7 @@
     export let projectName = "";
     export let projectIconImagePath;
     export let projectDescription = "";
+    export let projectMetaFilePath = "";
 
     let width = "w-[17.5rem]";
     let height = "h-[15rem]";
@@ -67,7 +68,7 @@
         // if it click on a tag, do nothing
         // @ts-ignore
         if (ev.target.tagName == "A") return;
-        window.open(`/#/projects/${projectName}?readme=https://raw.githubusercontent.com/Ryuuu825/${projectName}/main/readme.md`, "_self");
+        window.open(`/#/projects/${projectName}?readme=${projectMetaFilePath}`, "_self");
     }}
 >
     <img
