@@ -180,11 +180,11 @@
             >
                 <li class="w-24 text-center mt-auto sm:mx-3">
                     <i class="sm:w-[3rem] sm:h-[3rem] sm:my-2 scale-[70%] sm:scale-100 hover:text-gray-400 fab fa-3x fa-android" />
-                    <p>Android</p>
+                    <p>Flutter</p>
                 </li>
                 <li class="w-24 text-center mt-auto sm:mx-3">
                     <i class="sm:w-[3rem] sm:h-[3rem] sm:my-2 scale-[70%] sm:scale-100 hover:text-gray-400 fab fa-3x fa-apple" />
-                    <p>IOS</p>
+                    <p>SwiftUI</p>
                 </li>
             </ul>
         </div>
