@@ -7,14 +7,16 @@
 
 <div class="w-full h-min animate-fade-in">
     <div class="flex flex-col sm:flex-row">
-        <div
-            class="py-5 sm:py-12"
-        >
+        <div class="py-5 sm:py-12">
             <div class="rounded-xl overflow-hidden mb-12">
-                <img src="/ken.png" alt="" class="overflow-hidden w-full h-[10rem] sm:h-[15rem] object-cover ">
+                <img
+                    src="/ken.png"
+                    alt=""
+                    class="overflow-hidden w-full h-[10rem] sm:h-[15rem] object-cover"
+                />
             </div>
 
-            <h1 class="text-2xl mb-3 font-semibold font-serif ">My Passion</h1>
+            <h1 class="text-2xl mb-3 font-semibold font-serif">My Passion</h1>
             <Paragraph text="Ofc. I love building software." margin="mb-4" />
             <Paragraph
                 text="In my free time, I like to read tutorials and books 
@@ -40,9 +42,8 @@
             </div>
 
             <Paragraph
-                text="That doesn't mean that I don't like Backend and Frontend. In fact, I like building 
-                web applications and mobile applications. I'm also interested in building
-                server-side APIs."
+                text="This doesn't mean that I don't like Backend and Frontend. In fact, I like building 
+                web applications and mobile applications."
                 margin="mb-4"
             />
 
@@ -92,23 +93,31 @@
 
             <Paragraph
                 text="
-                I interned at Genieland Ltd. in the summer of 2022, a local IT company that provides expert AI 
-                solutions for human-centered health activities. I wrote an IOS application to showcase our concept 
-                of assisting visually-blinded individuals. Thus, I am amazed about how technology and computers 
-                can benefit minorities in social situations. Furthermore, it reinforced my desire to be a software 
-                developer. University is an important pivot where many experts congregate and improve. I want to 
-                major in computer science at university to enhance my career development in the IT field and acquire 
-                new abilities."
+                In the summer of 2022, I had the opportunity to intern at Genieland Ltd., a local IT firm specializing 
+                in AI solutions for human-centered health activities. During this time, I developed an iOS application 
+                aimed at assisting visually impaired individuals, an experience that not only highlighted the potential 
+                of technology in aiding marginalized communities, but also solidified my aspiration to become a software 
+                developer."
+            />
+
+            <Paragraph
+                text="
+                Now, as a university student, I am eager to delve deeper into the world of computer science. I am excited 
+                to broaden my understanding, learn new programming languages, and explore emerging technologies. I look forward 
+                to collaborating with like-minded peers and faculty at HKUST, and applying the knowledge gained in real-world 
+                scenarios. I am confident that this journey will equip me with the necessary skills and experience to contribute 
+                meaningfully to the IT sector in the future.
+                "
             />
 
             <div class="hidden sm:block text-gray-400 pt-4">
-                479 words, last updated on 2023-01-22
+                513 words, last updated on 2024-06-06
             </div>
 
-            <h1 class="text-2xl mb-3 font-semibold font-serif mt-12">Fav. song</h1>
+            <h1 class="text-2xl mb-3 font-semibold font-serif mt-12">
+                Fav. song
+            </h1>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OkAWnUN7nQkWAUsGRW7Xw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            
-
         </div>
     </div>
 </div>
