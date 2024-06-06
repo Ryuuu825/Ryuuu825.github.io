@@ -36,13 +36,17 @@
             <span class="text-sm sm:text-lg font-semibold">
                 BEng in Computer Science
             </span>
-
             <span class="hidden sm:inline-block text-xs">2023 - now </span>
         </div>
         <span class="hidden sm:flex text-sm">Hong Kong University of Science and Technology</span>
         <div class="flex flex-row sm:hidden text-xs mt-3">
             <span class="mr-3 w-[20%]">@HKUST</span>
             <span>2023 - now</span>
+        </div>
+        <div>
+            <ul class="list-disc list-inside mb-1 text-sm mt-2 ml-2">
+                <li><div class="inline-block font-semibold bg-slate-500 text-white rounded-md px-1 mr-1">A+</div> COMP2012 Object-Oriented Programming and Data Structures (C++)</li>
+        </ul>
         </div>
     </div>
     
