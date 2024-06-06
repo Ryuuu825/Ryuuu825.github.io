@@ -27,16 +27,6 @@
                         content = content.replaceAll(pdfLink, pdfLinkRaw);
                     });
                 }
-
-                // change all a tags to blob links
-                const imgLinks = content.match(/\[[a-zA-Z0-9]+\]\(https:\/\/github.com\/Ryuuu825\/[a-zA-Z-]+\/raw\/master(\/[a-zA-Z0-9.]+)+\)/g);
-                if (imgLinks != null) {
-                    imgLinks.forEach((imgLink) => {
-                        const imgLinkRaw = imgLink.replace("raw", "blob");
-                        content = content.replaceAll(imgLink, imgLinkRaw);
-                    });
-                }
-
                 return content;
             }
         } catch (error) {
@@ -48,8 +38,13 @@
     const get = () => {
         // change all a tags to open in new tab
         document.querySelectorAll("a").forEach((a) => {
-            a.setAttribute("target", "_blank");
-            a.setAttribute("rel", "noopener noreferrer");
+            if (!a.classList.contains("nav-link")) {
+                a.setAttribute("target", "_blank");
+                a.setAttribute("rel", "noopener noreferrer");
+                if (a.href.includes("raw")) {
+                    a.href = a.href.replace("raw", "blob");
+                }
+            }
         });
 
         document.querySelectorAll("pre > code").forEach((pre) => {
