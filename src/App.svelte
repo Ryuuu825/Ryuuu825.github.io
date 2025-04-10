@@ -86,7 +86,7 @@
         >
             <div class="flex items-center">
                 <img
-                    src="https://avatars.githubusercontent.com/u/85796869?v=4"
+                    src="https://pub-e1bdc637877b460bb70a0e23fe8615ea.r2.dev/icon.png"
                     alt=""
                     class="inline-block w-12 h-12 rounded-full mr-5"
                 />
