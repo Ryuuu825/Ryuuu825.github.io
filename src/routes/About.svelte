@@ -13,17 +13,9 @@
                     src="/ken.png"
                     alt=""
                     class="overflow-hidden w-full h-[10rem] sm:h-[15rem] object-cover"
+                    draggable="false"
                 />
             </div>
-
-            <h1 class="text-2xl mb-3 font-semibold font-serif">My Passion</h1>
-            <Paragraph text="Ofc. I love building software." margin="mb-4" />
-            <Paragraph
-                text="In my free time, I like to read tutorials and books 
-                about operating systems, compilers, and programming 
-                languages."
-                margin="mb-4"
-            />
 
             <div
                 class="hidden sm:block mb-8 w-full rounded-md p-3 px-6 border border-gray-500 text-sm xl:text-base"
@@ -40,12 +32,6 @@
                     >computer systems a programmer's perspective</a
                 >
             </div>
-
-            <Paragraph
-                text="This doesn't mean that I don't like Backend and Frontend. In fact, I like building 
-                web applications and mobile applications."
-                margin="mb-4"
-            />
 
             <h1 class="text-2xl mb-3 font-semibold font-serif mt-12">Bio</h1>
             <Paragraph
@@ -113,11 +99,6 @@
             <div class="hidden sm:block text-gray-400 pt-4">
                 513 words, last updated on 2024-06-06
             </div>
-
-            <h1 class="text-2xl mb-3 font-semibold font-serif mt-12">
-                Fav. song
-            </h1>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OkAWnUN7nQkWAUsGRW7Xw?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </div>
 </div>

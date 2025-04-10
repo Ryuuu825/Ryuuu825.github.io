@@ -1,12 +1,11 @@
 <script>
     import "../app.css";
-    import SvelteMarkdown from 'svelte-markdown'
+    import SvelteMarkdown from "svelte-markdown";
     import { onMount } from "svelte";
 
     import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
     const loadProfileMd = async () => {
-
         const github_profile_md = fetch(
             "https://raw.githubusercontent.com/Ryuuu825/Ryuuu825/master/README.md"
         )
@@ -15,12 +14,9 @@
 
         // @ts-ignore
         return await github_profile_md;
+    };
 
-    }
-
-    
-    onMount( async () => {
-
+    onMount(async () => {
         const bg = document.getElementById("bg");
 
         // get client cursor position
@@ -64,7 +60,7 @@
             // check if width of client
             if (window.innerWidth < 768) {
                 bg.style.backgroundSize = "cover";
-                // set the height could be larger 
+                // set the height could be larger
                 bg.style.height = "8rem";
             } else {
                 bg.style.height = "24rem";
@@ -73,12 +69,9 @@
     });
 
     document.title = "Ken's Portfolio - Home";
-
-
 </script>
 
-<div class="w-full h-min -z-10 overflow-hidden" >
-    
+<div class="w-full h-min -z-10 overflow-hidden">
     <div id="bg" class="w-full" data-background-image="/bg.png" />
 
     <div
@@ -91,15 +84,13 @@
             <SvelteMarkdown source={text} />
         {/await}
     </div>
-    
 </div>
 
 <style lang="postcss">
-
-
     #bg {
         /* change the cursor to a point */
-        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%23ffffff' d='M8 3.6c-1.968 0-3.6 1.632-3.6 3.6s1.632 3.6 3.6 3.6 3.6-1.632 3.6-3.6-1.632-3.6-3.6-3.6zm0 5.4c-1.104 0-2-0.896-2-2s0.896-2 2-2 2 0.896 2 2-0.896 2-2 2z'/></svg>"), auto;
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><path fill='%23ffffff' d='M8 3.6c-1.968 0-3.6 1.632-3.6 3.6s1.632 3.6 3.6 3.6 3.6-1.632 3.6-3.6-1.632-3.6-3.6-3.6zm0 5.4c-1.104 0-2-0.896-2-2s0.896-2 2-2 2 0.896 2 2-0.896 2-2 2z'/></svg>"),
+            auto;
         user-select: none;
         background-size: cover;
         background-repeat: no-repeat;
@@ -116,6 +107,4 @@
         margin-top: 1rem;
         color: #9ea9b8;
     }
-
 </style>
-
