@@ -24,6 +24,12 @@
         "/projects/:id": ProjectsDetails,
         "*": ComingSoon,
     };
+
+    function closeNav() {
+        const nav = document.getElementById("nav");
+        nav.classList.add("hidden");
+        nav.classList.remove("animate-fade-in");
+    }
 </script>
 
 <div
@@ -34,37 +40,49 @@
     <!-- the nav menu for mobile -->
     <div
         id="nav"
-        class="z-[100] absolute sm:hidden flex flex-col items-center justify-center w-full h-full"
+        class="hidden z-[100] absolute sm:hidden flex flex-col items-center justify-center w-full h-full"
         style="background-color:#212529"
     >
-        <!-- the cross to exit the menu -->
-
         <a
-            class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white nav-link"
+            class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white"
             href="#/"
-            on:click={(e) => handleATagClick(e.target)}>Home</a
+            on:click={closeNav}
         >
+            Home
+        </a>
 
         <a
             class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white"
             href="#/projects"
-            on:click={(e) => handleATagClick(e.target)}>Projects</a
+            on:click={closeNav}
         >
+            Projects
+        </a>
+        
         <a
             class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white"
             href="#/skills"
-            on:click={(e) => handleATagClick(e.target)}>Skills</a
+            on:click={closeNav}
         >
+            Skills
+        </a>
+        
         <a
             class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white"
             href="#/experiences"
-            on:click={(e) => handleATagClick(e.target)}>Experiences</a
+            on:click={closeNav}
         >
+            Experiences
+        </a>
+        
         <a
             class="my-1 nav-link px-4 hover:bg-gray-500 text-center py-1 rounded-sm hover:text-white"
             href="#/about"
-            on:click={(e) => handleATagClick(e.target)}>About</a
+            on:click={closeNav}
         >
+            About
+        </a>
+
         <button
             class="absolute top-0 right-0 m-5"
             on:click={() => {
@@ -77,7 +95,6 @@
             <i class="fas fa-times fa-2x scale-75 text-white"></i>
         </button>
     </div>
-
     <!-- main content -->
     <div class="p-12 md:p-24 pb-0 mb-auto w-full">
         <div
@@ -165,7 +182,7 @@
                 >
                     <!-- navigation button for mobile -->
                     <button
-                        class=" block sm:hidden"
+                        class="block sm:hidden"
                         on:click={() => {
                             const nav = document.getElementById("nav");
                             nav.classList.toggle("hidden");
