@@ -11,11 +11,22 @@
     <h1 class="text-2xl font-bold mb-5">Work Experience</h1>
     <h2 class="text-xl font-bold mb-5">Part time</h2>
     <WorkExperienceEntry
+        company_icon_src="company_icons/evention.jpg"
+        company_name="Event Master Limited"
+        company_link="https://www.eventionapp.com"
+        position="Backend Developer"
+        date="2025"
+        description={[
+        ]}
+        tech={["Laravel", "MySQL", "VueJS"]}
+    />
+
+    <WorkExperienceEntry
         company_icon_src="company_icons/tabnext.jpeg"
         company_name="Tab Next Limited"
         company_link="https://www.tabnext.asia"
         position="Web developer"
-        date="summer 2022"
+        date="late 2024"
         description={[
             "Participated in developing responsive web applications for multiple healthcare projects using DotNet and VueJS",
         ]}
@@ -23,6 +34,16 @@
     />
 
     <h2 class="text-xl font-bold mb-5">Internships</h2>
+     <WorkExperienceEntry
+        company_icon_src="company_icons/evention.jpg"
+        company_name="Event Master Limited"
+        company_link="https://eventionapp.com/"
+        position="Backend developer Intern"
+        date="summer 2024"
+        description={[
+        ]}
+        tech={["Laravel", "MySQL", "VueJS"]}
+    />
     <!-- 
         Code by hands, Intern
         https://www.codebyhands.com/ 
@@ -32,7 +53,7 @@
         company_name="Code By Hands Limited"
         company_link="https://www.codebyhands.com/"
         position="Full-stack developer Intern"
-        date="summer 2022"
+        date="summer 2024"
         description={[
             "Requirements Gathering: Collaborated with the client to understand system needs and document requirements.",
             "User Flow Design: Created intuitive user flows to enhance user experience.",
