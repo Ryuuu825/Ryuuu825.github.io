@@ -27,11 +27,6 @@
             text: "About",
             active: false,
         },
-        {
-            href: "#/resume",
-            text: "Resume",
-            active: false,
-        },
     ];
 
     function onRouteChange(route) {
@@ -56,7 +51,7 @@
 </script>
 
 <div
-    class="sm:flex flex-row justify-between pt-10 w-full border-b pb-3 border-gray-500 z-[99] sm:sticky top-0"
+    class="sm:flex flex-row justify-between pt-10 w-full border-b pb-3 border-gray-500 z-[99] sm:sticky top-0 left-0"
     style="background-color: #212529;"
 >
     <div

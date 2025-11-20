@@ -33,14 +33,14 @@
 </script>
 
 <div
-    class="w-screen h-screen overflow-x-hidden sm:text-xs md:text-base xl:text-lg flex flex-col"
+    class="w-screen h-screen overflow-x-hidden md:text-xs md:text-base xl:text-lg flex flex-col"
 >
     <SvelteToast />
 
     <!-- the nav menu for mobile -->
     <div
         id="nav"
-        class="hidden z-[100] absolute sm:hidden flex flex-col items-center justify-center w-full h-full"
+        class="hidden z-[100] absolute md:hidden flex flex-col items-center justify-center w-full h-full"
         style="background-color:#212529"
     >
         <a
@@ -98,29 +98,28 @@
     <!-- main content -->
     <div class="p-12 md:p-24 pb-0 mb-auto w-full">
         <div
-            class="md:flex md:flex-row w-full items-center z-[99] sticky top-0 py-3 pb-5 md:py-0"
-            style="background-color: #212529;"
+            class="md:flex md:flex-row w-full items-center z-[99] sticky top-0 pl-2 py-1 pb-1 md:py-0 bg-[#212529]"
         >
             <div class="flex items-center">
                 <img
                     src="https://pub-e1bdc637877b460bb70a0e23fe8615ea.r2.dev/icon.png"
                     alt=""
-                    class="inline-block w-12 h-12 rounded-full mr-5"
+                    class="inline-block md:w-12 md:h-12 h-8 w-8 rounded-full mr-5 ring-2 ring-offset-2 ring-offset-gray-900"
                 />
 
                 <div
-                    class="flex flex-col sm:flex-row sm:justify-center sm:items-center"
+                    class="flex flex-col md:flex-row md:justify-center md:items-center"
                 >
-                    <h1 class="font-extrabold text-xl sm:text-3xl sm:w-32">
+                    <h1 class="font-extrabold text-xl md:text-3xl md:w-32">
                         Ken Lee
                     </h1>
 
                     <span
-                        class="hidden sm:inline-block w-0.5 h-5 bg-gray-200 sm:mx-2"
+                        class="hidden md:inline-block w-0.5 h-5 bg-gray-200 md:mx-2"
                     />
 
                     <div
-                        class="flex justify-start items-center gap-1 h-[2.5rem]"
+                        class="hidden md:flex justify-start items-center gap-1 h-[2.5rem]"
                         style="color:#718096"
                     >
                         <a
@@ -165,14 +164,14 @@
                     </div>
 
                     <span
-                        class="hidden sm:inline-block w-0.5 h-5 bg-gray-200 sm:mx-2"
+                        class="hidden md:inline-block w-0.5 h-5 bg-gray-200 md:mx-2"
                     />
                     <h1 class="font-bold text-xs md:text-xl inline-block mt-1">
                         Software Engineer
                     </h1>
                     <!-- Cursor -->
                     <span
-                        class="hidden sm:inline-block w-1 h-4 mt-1 bg-gray-200 animate-cursor-blink relative mx-2"
+                        class="hidden md:inline-block w-1 h-4 mt-1 bg-gray-200 animate-cursor-blink relative mx-2"
                     />
                 </div>
 
@@ -182,7 +181,7 @@
                 >
                     <!-- navigation button for mobile -->
                     <button
-                        class="block sm:hidden"
+                        class="block md:hidden"
                         on:click={() => {
                             const nav = document.getElementById("nav");
                             nav.classList.toggle("hidden");
@@ -205,7 +204,7 @@
     </div>
 
     <footer
-        class="py-6 text-center text-xs border-t border-gray-500 sm:mx-1 md:mx-24"
+        class="py-6 text-center text-xs border-t border-gray-500 md:mx-1 md:mx-24"
     >
         &copy; 2025 Ken Lee
     </footer>
